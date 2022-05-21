@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiTANGENTtt</title>
+    <link rel="icon"
+        href="data:image/jpeg;base64,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"
+        type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <!-- -------------------------------------------------------------------------nav bar -->
+
+    <header class="header bg-white">
+        <div class="col-logo">
+            <img src="image/logo2.jpeg   " alt="">
+            <a href="#" target="_blank" class="logo">PiTANGENT</a>
+        </div>
+
+        <nav class="navBar">
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link"> Case studies </a></li>
+                <li><a href="#" class="navbar-link"> About </a></li>
+                <li><a href="#" class="navbar-link"> Contact </a></li>
+                <li>
+                    <div class="menu">
+                       <div class="menu-icon"><i class="fas fa-bars"></i></div><a href="#" class="navbar-link"> Menu </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-navbar-btn">
+            <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+            <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+        <!-- <div class="mobile-navbar-btn">
+                <i name="menu" class="fas fa-bars mobile-nav-icon"></i>
+                <i name="close" class="fas fa-window-close mobile-nav-icon"></i>
+            </div> -->
+    </header>
+
+
+    <!--------------------------------------------------------------------------------------------- 
+                                                        header 
+    ------------------------------------------------------------------------------------------------->
+    <section class="hero-hero">
+        <div class="section main">
+            <div class="containerr">
+                <div class="hero-section ggrid ggrid-two-column both">
+                    <div class="right-go-top" {{--style="background-image: url(../image/heading.png);"--}}>
+                        <img src="image/heading.png" alt="">
+                    </div>
+                    <div class="hero-text left-go-bottom">
+                        <h1 class="hero-heading">Is your kid okey in new<br>
+                            normal?</h1>
+                        <p class="para my-5">
+                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                            demonstrate the visual form of a document or a typeface without relying on meaningful
+                            content. Lorem ipsum may be used as a placeholder before.....
+                        </p>
+                        <a href="#" target="_blank" class="btnn hero-btnnn">
+                            Read More<i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="hero-img">
+                        <img src="image/heading.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------==========================================================================
+                                                        list section 
+    ===============================================================================================-->
+    <section class=" list-margien-none containerr">
+        <div class="navBar li-padding">
+            <ul class="list">
+                <li class="feature-list f-list">All</li>
+                <li class="feature-list">Tech talk</li>
+                <li class="feature-list">For startups</li>
+                <li class="feature-list">Business and concepts</li>
+                <li class="feature-list">Announcements</li>
+                <li class="feature-list">Great place to work</li>
+                <li class="feature-list">Hall of frames</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------------------- 
+                                                Blog section 
+    ------------------------------------------------------------------------------------------------------>
+    <section class="containerr my-5">
+        <div class="blog-header ">
+            <div class="heading">
+                <h1>our tranding blog</h1>
+            </div>
+            <div class="view-more">
+                <a href="#" class="castom-gap">
+                    <p>view more</p><i class="fas fa-chevron-right ml-4"></i>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="blog-post mt-5">
+            <div class="left-blog">
+                <img src="image/blog1.png" alt="">
+                <h6 class="trending-blog mt-5 text-muted">trending blog</h6>
+                <h1 class="tranding-h1 mt-3">guide to evlved syber securitytips for this new COVID era</h1>
+                <p class="para mt-4 blog-para">In publishing and graphic design, Lorem text commonly used to
+                    demonstrate the visual form of a document or a typeface without relying on meaningful</p>
+            </div>
+            <div class="right-blog">
+                <div class="up-blog">
+                    <img src="image/blog2.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted">trending blog</h6>
+                    <h1 class="tranding-h1 tranding-h1-right mt-3">Rice of robotic in healthcare boon or course</h1>
+                </div>
+                <div class="down-blog mt-5">
+                    <img src="image/blog3.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted">trending blog</h6>
+                    <h1 class="tranding-h1 tranding-h1-right mt-3">ioMT is revolutionzing the healthcare industry in the use</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------------------- 
+                                                sign-up-button 
+------------------------------------------------------------------------------------------------------>
+    <section class="containerr my-5">
+        <div class="sign-up-button">
+            <h1 class="tranding-h1 ">Get in touch with our latest blogs</h1>
+            <p class="para my-4">In publishing and graphic design, Lorem text commonly used to
+                demonstrate the visual form of a document or a typeface without relying on meaningful</p>
+            <a href="#" target="_blank" class="btnn btn-signup">
+                Sign Up For Free<i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#" target="_blank" class="res-btn">
+                Sign Up <i class="fas fa-sign-in-alt"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------------------- 
+                                                Edit pick 
+------------------------------------------------------------------------------------------------------>
+
+    <section class="containerr my-5">
+        <div class="edit-pick">
+            <div class="left-pick">
+                <div class="heading">
+                    <h1>Editor's pick</h1>
+                </div>
+                <hr>
+                <div class="left-part">
+                    <div class="left-part-img">
+                        <img src="image/limg1.png" alt="">
+                    </div>
+                    <div class="left-part-data">
+                        <h3 class="tranding-h1 castom-text-width">looking for best app devlopment courses? the trending ones hear!
+                        </h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="left-part">
+                    <div class="left-part-img">
+                        <img src="image/limg2.png" alt="">
+                    </div>
+                    <div class="left-part-data">
+                        <h3 class="tranding-h1 castom-text-width">want to see the future? 3 way through which AI all we show you 2021
+                            business changes!</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="left-part">
+                    <div class="left-part-img">
+                        <img src="image/limg3.png" alt="">
+                    </div>
+                    <div class="left-part-data">
+                        <h3 class="tranding-h1 castom-text-width">want to see the future? 3 way through which AI all we show you 2021
+                            business changes!</h3>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="right-pick bg-light">
+                <div class="body-content">
+
+                    <div class="png-img">
+                        <img src="image/subscribe.png" alt="">
+                    </div>
+
+                    <h3 class="tranding-h1 font-sizt-castom mt-5">subcribe to get our best content in your inbox</h3>
+                    <div class="input-box mt-5">
+                        <div class="input "><input type="text" placeholder="Email address.."></div>
+                        <div class="button"><button type="submit"
+                                class="bg-primary text-white border-0">Subscribe</button></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------------------------------------------------------------------------------------------------------
+                                                            discover the letest in
+------------------------------------------------------------------------------------------------------------------------->
+    <section class="my-5 bg-light">
+        <div class="containerr section-blog">
+            <div class="blog-header ">
+                <div class="heading">
+                    <h1>discover the letest in...</h1>
+                </div>
+                <div class="view-more">
+                    <a href="#" class="castom-gap">
+                        <p>view more</p><i class="fas fa-chevron-right ml-4"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <!-- -------------------------------------------------card row 1 -->
+            <div class="card-section mt-3">
+                <div class="card-body">
+                    <img src="image/letest1.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/letest2.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/letest3.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+            </div>
+            <!-- -------------------------------------------------card row 2 -->
+            <div class="card-section mt-5">
+                <div class="card-body">
+                    <img src="image/letest4.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/letest5.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/letest6.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+            </div>
+            <!-- -------------------------------------------------card row 3 -->
+            <div class="card-section mt-5">
+                <div class="card-body">
+                    <img src="image/limg1.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none ">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/limg2.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+                <div class="card-body">
+                    <img src="image/limg3.png" alt="">
+                    <h6 class="trending-blog mt-5 text-muted font-weight-none">latest blog</h6>
+                    <h3 class="tranding-h1 card-h1-size">want to see the future? 3 way through which AI all we show you 2021
+                        business changes!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------------------------------------------------------------------------------------------------------
+                                                        Review section
+------------------------------------------------------------------------------------------------------------------------->
+    <section class="containerr mt-5">
+        <div class="review-header">
+            <div class="blog-header ">
+                <div class="heading">
+                    <h1 class="res-rev">hear are some scrolls of <br> success that keeps us going</h1>
+                </div>
+                <div class="view-more next-prv-btn">
+                    <div class="rev-left button-review rounded-circle">
+                        <i class="fas fa-caret-left"></i>
+                    </div>
+                    <div class="rev-right button-review bg-primary rounded-circle text-white">
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="review-body">
+                <div class="user-img">
+                    <img src="image/user.jpeg" alt="">
+                </div>
+                <div class="user-review">
+                    <p class="para review-para my-4"> "In publishing and graphic design, Lorem text commonly used to
+                        demonstrate the visual form of a document or a typeface without relying on meaningful
+                        demonstrate the visual form of a document or a typeface without relying on meaningful"</p>
+
+                    <h3 class="user-name">Bubai Ghosh</h3>
+                    <h6 class="deg text-muted">VP Operater</h6>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------------------------------------------------------
+                                                        contact
+------------------------------------------------------------------------------------------------------------------------->
+    <section class="contact-section bg-primary">
+        <div class="containerr">
+            <div class="contact-header">
+                <h1 class="text-white">Is degital success eluding you? <br> <span class="font-bold">We can help</span>
+                </h1>
+            </div>
+            <div class="contact-input">
+                <div class="input "><input type="text" class="bg-primary" placeholder="Email"></div>
+                <div class="input "><input type="text" class="bg-primary" placeholder="Phone"></div>
+            </div>
+            <div class="contact-button res-contact-button ">
+                <a href="#" target="_blank" class="btnn btn-signup res-btn-signup bg-white text-primary mobole-view">
+                    Sign Up For Free<i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------------------------------------------------------
+                                                        footer
+------------------------------------------------------------------------------------------------------------------------->
+    <section class="footer bg-dark text-white">
+        <div class="containerr">
+            <div class="footer-body">
+                <div class="left-f-boddy">
+                    <div class="footer-header">
+                        <h1 class="tranding-h1 text-white">Lets craft something<br>aswam together</h1>
+                    </div>
+                    <div class="footer-link">
+                        <div class="colm-1">
+                            <div class="footer-ul">
+                                <div class=" bd-highlight">Home</div>
+                                <div class=" bd-highlight my-5">About us</div>
+                                <div class=" bd-highlight">Case studies</div>
+                                <div class=" bd-highlight my-5">Services</div>
+                                <div class=" bd-highlight">Thoughts</div>
+                                <div class=" bd-highlight my-5">Careers</div>
+                                <div class=" bd-highlight">Contact us</div>
+                            </div>
+                        </div>
+                        <div class="colm-2 text-muted">
+                            <div class="footer-ul">
+                                <div class=" bd-highlight bold-link">INDDUSTRIES</div>
+                                <div class=" bd-highlight my-3">IT</div>
+                                <div class=" bd-highlight">Agtitech</div>
+                                <div class=" bd-highlight my-3">Education & Learning</div>
+                                <div class=" bd-highlight">Travel & Transport</div>
+                                <div class=" bd-highlight my-3">Media & Entertainment</div>
+                                <div class=" bd-highlight">Hospitality & Real Estatite</div>
+                                <div class=" bd-highlight my-3"> Mobile & Telecome</div>
+                                <div class=" bd-highlight">Healthcare & Wellness</div>
+                                <div class=" bd-highlight my-3"> Finance & Fintech</div>
+                            </div>
+                        </div>
+                        <div class="colm-3 text-muted">
+                            <div class="footer-ul ">
+                                <div class=" bd-highlight bold-link">QUICK LINKS</div>
+                                <div class=" bd-highlight my-3">News <span
+                                        class="new-link bg-primary text-white">NEW</span></div>
+                                <div class=" bd-highlight">Insights</div>
+                                <div class=" bd-highlight my-3">What next</div>
+                                <div class=" bd-highlight">About us</div>
+                                <div class=" bd-highlight my-3">Life of open web</div>
+                                <div class=" bd-highlight">Careers <span class="bg-dark text-primary hiring">We are
+                                        hiring</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-f-body">
+                    <div class="r-f-header">
+                        <p class="btn-para text-muted">Get a free consulting on start</p>
+                        <a href="" class="aaa">
+                            <div class="c-us-button">
+                                contact us <span class="button-gap"><i class="fas fa-angle-right far"></i></span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="review-link-footer">
+                        <div class="c-link linkkk">
+                            <div class="link-logo">
+                                <!-- <img src="image/r-logo1.png" alt=""> -->
+                                <img src="https://pitangent.com/wp-content/uploads/2021/05/Group-44.png" alt="">
+                            </div>
+                            <div class="all-gap">
+                                <div class="star">
+                                    <div>4.9</div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                </div>
+                                <h3 class="text-white">Review</h3>
+                            </div>
+
+                        </div>
+                        <div class="glink linkkk">
+                            <div class="link-logo">
+                                <!-- <img src="image/r-logo2.png" alt=""> -->
+                                <img src="https://pitangent.com/wp-content/uploads/2021/05/Kickass-Product.png" alt="">
+                            </div>
+                            <div class="all-gap">
+                                <div class="star">
+                                    <div>4.9</div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                    <div><i class="fas fa-star"></i></div>
+                                </div>
+                                <h3 class="text-white">Review</h3>
+                            </div>
+                        </div>
+                        <div class="socal-link">
+                            <div><i class="fab fa-facebook"></i></div>
+                            <div><i class="fab fa-instagram-square"></i></div>
+                            <div><i class="fab fa-linkedin"></i></div>
+                            <div><i class="fab fa-behance-square"></i></div>
+                            <div><i class="fas fa-baseball-ball"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bootom mt-5">
+                <div class="name">
+                    <div class="col-logo f-col-logo">
+                        <img src="image/logo.jpeg   " alt="">
+                        <a href="#" target="_blank" class="logo">PiTANGENT</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p> ©2021 Pitangent Analytics; Technology Solutions Pvt. Ltd. All Right Reserved.<br>CIN:
+                        U72200WB2017PTC223609 GSTIN: 19AAJCP5503F1ZF
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
+
+</html>
